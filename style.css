@@ -48,4 +48,12 @@ article {
   text-decoration: none;
 }
 
+.button__link--green {
+background-color: #1fcca4
+}
+
+.button__link--blue {
+ background-color: #0197f6;
+}
+
 

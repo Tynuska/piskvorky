@@ -64,4 +64,6 @@ background-color: #1fcca4
   background-color: #0090e9;
  }
  
-
+.button__link--border {
+  border-bottom: 1.5px solid #283e50 ;
+}

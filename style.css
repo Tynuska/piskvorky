@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+
+  .containter {
+  width: 600px;
+  margin: 0 auto;
+  }

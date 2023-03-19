@@ -52,8 +52,16 @@ article {
 background-color: #1fcca4
 }
 
+.button__link--green:hover {
+  background-color: #1cbb96;
+  }
+
 .button__link--blue {
  background-color: #0197f6;
 }
 
+.button__link--blue:hover {
+  background-color: #0090e9;
+ }
+ 
 

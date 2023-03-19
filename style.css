@@ -1,14 +1,28 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  ::after,
-  ::before {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
 
-  .containter {
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+.containter {
   width: 600px;
   margin: 0 auto;
-  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article {
+  color: #ffffff;
+  font-family: Arial;
+  background-color: #283e50;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}

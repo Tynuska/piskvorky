@@ -35,8 +35,24 @@ h1 {
 }
 
 .first-line__left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.first-line__head {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.first-line__circle {
+    width: 25px;
+    height: 25px;
+    border: 2.5px solid white;
+    border-radius: 50%;
+    
 }
 
 .first-line__right {
@@ -61,7 +77,7 @@ h1 {
     background-color: #0197f6;
 }
 
-.first-line__button-blue {
+.first-line__button-blue:hover {
     background-color: #0090e9;
 }
 
@@ -82,3 +98,4 @@ h1 {
 .field button:hover {
     opacity: 0.1;
 }
+

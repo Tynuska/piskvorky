@@ -99,3 +99,14 @@ h1 {
     opacity: 0.1;
 }
 
+.board__field--circle {
+    background-image: url(img/circle.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.board__field--cross {
+    background-image: url(img/cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

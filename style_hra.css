@@ -47,13 +47,12 @@ h1 {
     font-weight: 700;
 }
 
-.first-line__circle {
+/* .first-line__circle {
     width: 25px;
     height: 25px;
     border: 2.5px solid white;
-    border-radius: 50%;
-    
-}
+    border-radius: 50%;    
+} */
 
 .first-line__right {
     display: flex;
@@ -98,6 +97,12 @@ h1 {
 .field button:hover {
     opacity: 0.1;
 }
+
+.board__field--width {
+    width: 100px;
+    height: 100px;
+    display: inline-block;  
+} 
 
 .board__field--circle {
     background-image: url(img/circle.svg);

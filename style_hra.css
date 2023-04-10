@@ -98,10 +98,11 @@ h1 {
     opacity: 0.1;
 }
 
-.board__field--width {
-    width: 100px;
+.board__field {
+    width: 50px;
     height: 100px;
-    display: inline-block;  
+    display: inline-block;
+    filter: invert(100%)  
 } 
 
 .board__field--circle {

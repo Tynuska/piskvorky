@@ -1,3 +1,5 @@
+import { findWinner } from "https://unpkg.com/piskvorky@0.1.4";
+
 let currentPlayer = "circle";
 const playerElm = document.querySelector("#player");
 
@@ -19,6 +21,37 @@ const addClass = (event) => {
   }
 };
 
+const buttons = document.querySelectorAll('button');
+console.log(buttons)
+
+
+
+const buttonsArray = Array.from(buttons);
+console.log(buttonsArray)
+const herniPole = buttonsArray.map((button) => {
+  if (button.classList.contains('board__field--cross')) {
+    return  'x';
+  } else if (button.classList.contains('board__field--circle')) {
+    return 'o';
+  } else return "_";
+});
+
+// console.log(herniPole);
+
+
+
+const vitez = findWinner(herniPole);
+if (vitez === "o") {
+  alert("Vyhrálo kolečko!");
+} else if (vitez === "x") {
+  alert("Vyhrál křížek!");
+} 
+
+
+buttons.forEach((button) => {
+  button.addEventListener("click", addClass);
+});
+
 // //proč nefunguje?
 // const buttons = document.querySelector('.field')
 // const buttonsAll = buttons.querySelectorAll('button')
@@ -26,10 +59,11 @@ const addClass = (event) => {
 //     button.addEventListener('click,', addClass)
 // })
 
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", addClass);
-  console.log(button);
-});
+// const buttons = document.querySelectorAll("button")
+// buttons.forEach((button) => {
+//   button.addEventListener("click", addClass);
+//   console.log(button);
+// });
 
 // document.querySelector('button:nth-child(1)').addEventListener('click', addClass);
 // document.querySelector('button:nth-child(1)').addEventListener('click', addClass);
@@ -42,4 +76,3 @@ document.querySelectorAll("button").forEach((button) => {
 // document.querySelector('button:nth-child(7)').addEventListener('click', addClass);
 // document.querySelector('button:nth-child(8)').addEventListener('click', addClass);
 // document.querySelector('button:nth-child(9)').addEventListener('click', addClass);
-// document.querySelector('button:nth-child(10)').addEventListener('click', addClass);

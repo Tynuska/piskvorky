@@ -21,6 +21,7 @@ const addClass = (event) => {
 
   //Playing field
   const buttonsArray = Array.from(buttons);
+
   const playingField = buttonsArray.map((button) => {
     if (button.classList.contains("board__field--cross")) {
       return "x";
@@ -30,7 +31,7 @@ const addClass = (event) => {
   });
 
   //Fetch
-  const fields = document.querySelectorAll("button");
+  // const fields = document.querySelectorAll("button");
   fetch("https://piskvorky.czechitas-podklady.cz/api/suggest-next-move", {
     method: "POST",
     headers: {
@@ -45,7 +46,7 @@ const addClass = (event) => {
     .then((data) => {
       if (currentPlayer === "cross") {
         const { x, y } = data.position;
-        const field = fields[x + y * 10];
+        const field = buttons[x + y * 10];
         field.click();
       }
     });
@@ -65,14 +66,13 @@ const addClass = (event) => {
   }
 };
 
-//use class while clicking
+//call addClass function  while clicking
 const buttons = document.querySelectorAll("button");
-
 buttons.forEach((button) => {
   button.addEventListener("click", addClass);
 });
 
-//restart
+// restart
 const restart = document.querySelector("#restart");
 restart.addEventListener("click", (event) => {
   if (confirm("Opravdu chceš začít znovu?") === false) {
